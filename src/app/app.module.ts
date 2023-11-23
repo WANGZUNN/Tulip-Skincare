@@ -6,6 +6,7 @@ import { BodyComponent } from './body/body.component';
 import { TopBarComponent } from './header/top-bar/top-bar.component';
 import { BottomBarComponent } from './header/bottom-bar/bottom-bar.component';
 import { SearchBarComponent } from './header/search-bar/search-bar.component';
+import { ProductlistComponent } from './productlist/productlist.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SearchBarComponent } from './header/search-bar/search-bar.component';
     BodyComponent,
     TopBarComponent,
     BottomBarComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    ProductlistComponent
   ],
   imports: [
     BrowserModule,
