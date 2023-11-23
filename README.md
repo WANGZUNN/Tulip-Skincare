@@ -1,5 +1,5 @@
-# This project deployed by Vercel app
-https://e-talket-wangzunns-projects.vercel.app/
+# This project was deployed by Vercel app
+e-talket.vercel.app
 
 # My
 
