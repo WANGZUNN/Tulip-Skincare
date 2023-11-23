@@ -6,17 +6,34 @@ body {
 }
 
 .etalket-header {
+    display: flex;
     background-color: #780606;
     color: white;
     padding: 10px;
-    text-align: left;
+    text-align: center;
+}
+.text {
+    align-self: center;
+    font-family: 'YourFont', sans-serif; /* Replace 'YourFont' with the desired font name */
+    font-size: 30px; /* Adjust the font size as needed */
+    font-weight: bold; /* Adjust font weight if needed */
+    margin: 0px; /* Added margin to the right of the text */
 }
 
+
 .etalket-logo {
-    align-items: left;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    border-radius: 50%; /* Make it a circle */
+    overflow: hidden; /* Ensure the circular shape is maintained */
+    margin-right: 10px; /* Adjusted margin from 10px to 5px */
+}
+
+.etalket-logo img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Maintain aspect ratio */
+    
 }
 
 .etalket-header-nav{
