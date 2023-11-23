@@ -1,5 +1,9 @@
-<p>Name: {{product.Name}}</p>
-<p>Price:  {{product.Price}} $</p>
-<p>Color:  {{product.Color}}</p>
-<p>Discount:  {{product.Discount_Price}} $</p>
-
+<div class="product-card">
+    <img class="product-image" [src]="product.Pimg" alt="Product Image">
+    <div class="card-content">
+      <h2>{{ product.Name }}</h2>
+      <p>{{ product.Color }}</p>
+      <p class="price">${{ product.Price }}</p>
+      <p class="discount">${{ discountprice().toFixed() }}</p>
+      <p>Stock: {{ stockcheck() }}</p>
+      <button class="buy-now-button">Buy Now</button>
