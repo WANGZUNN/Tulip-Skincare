@@ -1,3 +1,6 @@
+# This project deployed by Vercel app
+https://e-talket-wangzunns-projects.vercel.app/
+
 # My
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
