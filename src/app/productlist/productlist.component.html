@@ -1,9 +1,25 @@
-<div class="product-card">
-    <img class="product-image" [src]="product.Pimg" alt="Product Image">
-    <div class="card-content">
-      <h2>{{ product.Name }}</h2>
-      <p>{{ product.Color }}</p>
-      <p class="price">${{ product.Price }}</p>
-      <p class="discount">${{ discountprice().toFixed() }}</p>
-      <p>Stock: {{ stockcheck() }}</p>
-      <button class="buy-now-button">Buy Now</button>
+<div class="product-container">
+  <div class="product-card product-card-1">
+      <img class="product-image" [src]="product_1.Pimg" alt="Product Image">
+      <div class="card-content">
+          <h2>{{ product_1.Name }}</h2>
+          <p>{{ product_1.Color }}</p>
+          <p class="price">${{ product_1.Price }}</p>
+          <p class="discount">${{ discountprice(product_1).toFixed() }}</p>
+          <p>Stock: {{ stockcheck(product_1) }}</p>
+          <button class="buy-now-button" [disabled]="(product_1.instock <= 0)">Buy Now</button>
+      </div>
+  </div>
+
+  <div class="product-card product-card-2">
+      <img class="product-image" [src]="product_2.Pimg" alt="Product Image">
+      <div class="card-content">
+          <h2>{{ product_2.Name }}</h2>
+          <p>{{ product_2.Color }}</p>
+          <p class="price">${{ product_2.Price }}</p>
+          <p class="discount">${{ discountprice(product_2).toFixed() }}</p>
+          <p>Stock: {{ stockcheck(product_2) }}</p>
+          <button class="buy-now-button" [disabled]="(product_2.instock <= 0)">Buy Now</button>
+      </div>
+  </div>
+</div>

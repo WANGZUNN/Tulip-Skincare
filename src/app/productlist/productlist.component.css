@@ -1,76 +1,71 @@
-body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
+.product-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease-in-out;
+  margin-right: 20px; /* Adjust margin as needed */
+}
 
-    .product-card {
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      overflow: hidden;
-      width: 300px;
-      transition: transform 0.3s ease-in-out;
-    }
+.product-card:hover {
+  transform: scale(1.05);
+}
 
-    .product-card:hover {
-      transform: scale(1.05);
-    }
+.product-card .product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-    .product-image {
-      width: 100%;
-      height: 200px; /* Adjust the height as needed */
-      object-fit: cover;
-    }
+.product-card .card-content {
+  padding: 16px;
+}
 
-    .card-content {
-      padding: 16px;
-    }
+.product-card h2,
+.product-card p {
+  margin: 0;
+}
 
-    h2, p {
-      margin: 0;
-    }
+.product-card h2 {
+  font-size: 20px;
+  color: #333;
+}
 
-    h2 {
-      font-size: 20px;
-      color: #333;
-    }
+.product-card p {
+  font-size: 16px;
+  color: #666;
+}
 
-    p {
-      font-size: 16px;
-      color: #666;
-    }
+.product-card .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e44d26;
+}
 
-    .price {
-      font-size: 18px;
-      font-weight: bold;
-      color: #e44d26; /* Orange color for price */
-    }
+.product-card .discount {
+  text-decoration: line-through;
+  color: #999;
+}
 
-    .discount {
-      text-decoration: line-through;
-      color: #999;
-    }
+.product-card .buy-now-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #e44d26;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
 
-    .buy-now-button {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      background-color: #e44d26; /* Orange color for button */
-      color: #fff;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
-    }
+.product-card .buy-now-button:hover {
+  background-color: #d0451b;
+}
 
-    .buy-now-button:hover {
-      background-color: #d0451b; /* Darker shade on hover */
-    }
+.product-container {
+  display: flex;
+}
