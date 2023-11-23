@@ -1,0 +1,16 @@
+.etalket-header-top-bar {
+    display: flex;
+    justify-content: end;
+  
+}
+
+.etalket-header-top-bar a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.etalket-header-top-bar a:hover{
+    color: red;
+    text-decoration: none;
+    margin-right: 10px;
+}

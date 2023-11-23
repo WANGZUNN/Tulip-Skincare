@@ -1,0 +1,34 @@
+
+.etalket-search-bar {
+    display: flex;
+    background-color: #fff;
+    padding: 7px;
+    
+}
+
+
+
+.etalket-search-bar {
+    align-items: center;
+    margin-left: auto;
+}
+
+.etalket-search {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.etalket-search-btn {
+    background-color: #780606;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.etalket-search-btn:hover {
+    background-color: #297fb8;
+}
