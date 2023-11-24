@@ -7,16 +7,22 @@ import { Component } from '@angular/core';
 })
 
 export class ProductlistComponent {
-    
+    name:string = "";
+
   product_1 = {
     Name: "New / Iphone 15 Pro Max",
     Price: 1400,
     Color: "Matte black",
     // Set discount as percentage
-    discount: 5.2,
-    instock: 13,
+    discount: 15,
+    instock: 6,
     Pimg: 'assets/product-apple-iphone/IMAGE 2023-11-06 14:04:30.jpg',
   }
+
+  ontest(){
+    this.name = "Processing please wait";
+ }
+
 
   // product_2 = {
   //   Name: "Sok HengPhal",
@@ -36,4 +42,5 @@ export class ProductlistComponent {
   stockcheck(product:any) {
     return (product.instock > 0 ? 'Only ' + product.instock + ' items left' : 'Not in Stock');
   }
+
 }
