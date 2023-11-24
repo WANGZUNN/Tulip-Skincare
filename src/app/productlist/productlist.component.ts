@@ -17,11 +17,22 @@ export class ProductlistComponent {
     discount: 15,
     instock: 6,
     Pimg: 'assets/product-apple-iphone/IMAGE 2023-11-06 14:04:30.jpg',
+    
+  };
+  quantity: number = 1; // Initial quantity
+
+  incrementQuantity() {
+    if (this.quantity < this.product_1.instock) {
+      this.quantity++;
+    }
   }
 
-  ontest(){
-    this.name = "Processing please wait";
- }
+  decrementQuantity() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
+  }
+
 
 
   // product_2 = {
@@ -43,4 +54,7 @@ export class ProductlistComponent {
     return (product.instock > 0 ? 'Only ' + product.instock + ' items left' : 'Not in Stock');
   }
 
+
 }
+
+

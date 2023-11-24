@@ -1,17 +1,21 @@
-<div class="product-container" [hidden]="">
-  <div class="product-card product-card-1">
+<div class="product-container">
+    <div class="product-card product-card-1">
       <img class="product-image" [src]="product_1.Pimg" alt="Product Image">
       <div class="card-content">
-          <h2>{{  product_1.Name }}</h2>
-          <p>{{ product_1.Color }}</p>
-          <p class="price">${{ product_1.Price }}</p>
-          <p class="discount">${{ discountprice(product_1).toFixed() }}</p>
-          <p>Stock: {{ stockcheck(product_1) }}</p>
-          <button (click)="ontest()" class="buy-now-button" [disabled]="(product_1.instock <= 0)">Buy Now</button>
-          <br>
-          <h3>{{name}}</h3>
+        <h2>{{ product_1.Name }}</h2>
+        <p>{{ product_1.Color }}</p>
+        <p class="price">${{ product_1.Price }}</p>
+        <p class="discount">${{ discountprice(product_1).toFixed() }}</p>
+        <p>Stock: {{ stockcheck(product_1) }}</p>
+        <div class="quantity-controls">
+          <button (click)="incrementQuantity()">+</button>
+          <span>{{ quantity }}</span>
+          <button (click)="decrementQuantity()">-</button>
+        </div>
       </div>
+    </div>
   </div>
+  
 
   <!-- <div class="product-card product-card-2">
       <img class="product-image" [src]="product_2.Pimg" alt="Product Image">
@@ -24,4 +28,4 @@
           <button class="buy-now-button" [disabled]="(product_2.instock <= 0)">Buy Now</button>
       </div>
   </div> -->
-</div>
+
