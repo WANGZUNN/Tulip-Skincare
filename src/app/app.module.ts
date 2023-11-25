@@ -7,7 +7,7 @@ import { TopBarComponent } from './header/top-bar/top-bar.component';
 import { BottomBarComponent } from './header/bottom-bar/bottom-bar.component';
 import { SearchBarComponent } from './header/search-bar/search-bar.component';
 import { ProductlistComponent } from './productlist/productlist.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +20,7 @@ import { ProductlistComponent } from './productlist/productlist.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
