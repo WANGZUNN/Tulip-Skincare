@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent {
- 
+ searchtext = "";
 }

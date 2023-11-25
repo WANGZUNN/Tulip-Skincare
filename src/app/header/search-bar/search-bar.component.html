@@ -1,14 +1,20 @@
+<!-- Import FormsModule in your Angular module -->
+<!-- Example: app.module.ts -->
+<!-- import { FormsModule } from '@angular/forms'; -->
+
 <div class="header">
     <div class="search-container">
-        <input type="text" class="etalket-search" placeholder="Search">
+        <!-- Use [(ngModel)] instead of [ngModel] -->
+        <input [(ngModel)]="searchtext" class="etalket-search">
         <button class="etalket-search-btn">
             <i class="fa fa-search" aria-hidden="true"></i>
         </button>
     </div>
    
     <div class="cart">
-        <i class="fa-solid fa-cart-shopping"></i>
+        <!-- Use fa-shopping-cart instead of fa-cart-shopping -->
+        <i class="fa fa-shopping-cart"></i>
     </div>
 </div>
 
-
+<div class="searchfor">search-for: <span>{{searchtext}}</span></div>
