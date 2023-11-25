@@ -11,15 +11,15 @@ export class ProductlistComponent {
 
   product_1 = {
     Name: "New / Iphone 15 Pro Max",
-    Price: 1400,
+    Price: 1500,
     Color: "Matte black",
     // Set discount as percentage
-    discount: 15,
-    instock: 6,
+    discount: 20,
+    instock: 10,
     Pimg: 'assets/product-apple-iphone/IMAGE 2023-11-06 14:04:30.jpg',
     
   };
-  quantity: number = 1; // Initial quantity
+  quantity: number = 0; // Initial quantity
 
   incrementQuantity() {
     if (this.quantity < this.product_1.instock) {
@@ -32,6 +32,7 @@ export class ProductlistComponent {
       this.quantity--;
     }
   }
+
 
 
 
