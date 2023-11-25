@@ -40,7 +40,7 @@
 .product-card .price {
   font-size: 18px;
   font-weight: bold;
-  color: #e44d26;
+  color: #780606;
 }
 
 .product-card .discount {
@@ -53,7 +53,7 @@
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background-color: #e44d26;
+  background-color: #780606;
   font-size: 16px;
   font-weight: bold;
   border: none;
@@ -63,7 +63,7 @@
 }
 
 .product-card .buy-now-button:hover {
-  background-color: #d0451b;
+  background-color:  #780606;
 }
 
 .product-container {
@@ -80,7 +80,7 @@ button {
   padding: 5px 10px;
   margin: 0 5px;
   cursor: pointer;
-  background-color: #e44d26;
+  background-color:  #780606;
   color: #fff;
   border: none;
   border-radius: 5px;
