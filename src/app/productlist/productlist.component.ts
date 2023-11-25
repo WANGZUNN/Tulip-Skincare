@@ -28,7 +28,7 @@ export class ProductlistComponent {
   }
 
   decrementQuantity() {
-    if (this.quantity > 1) {
+    if (this.quantity > 0) {
       this.quantity--;
     }
   }
