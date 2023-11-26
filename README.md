@@ -1,5 +1,5 @@
 # This project was deployed by Vercel app
-e-talket.vercel.app
+tulip-skincare.vercel.app
 
 # My
 
