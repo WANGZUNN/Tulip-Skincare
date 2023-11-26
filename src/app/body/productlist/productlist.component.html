@@ -1,0 +1,16 @@
+<div class="product-card product-card-1" *ngFor="let prod of products; let i = index">
+  <img class="product-image" [src]="prod.Pimg" alt="Product Image">
+  <div class="card-content">
+    <h2>{{ prod.Name }}</h2>
+    <p>{{ prod.Color }}</p>
+    <p class="price">${{ prod.Price }}</p>
+    <p class="discount">${{ discountprice(prod, i).toFixed() }}</p>
+    <p>Stock: {{ stockcheck(prod) }}</p>
+    <div class="quantity-controls">
+      <button (click)="incrementQuantity(i)">+</button>
+      <span>{{ quantity[i] }}</span>
+      <button (click)="decrementQuantity(i)">-</button>
+    </div>
+  </div>
+</div>
+`,
