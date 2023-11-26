@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Directive } from '@angular/core';
 
 @Component({
   selector: 'app-bottom-bar',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./bottom-bar.component.css']
 })
 export class BottomBarComponent {
-     
+     features: string[] = ["Home","Product","About","Contact"];
 }
+

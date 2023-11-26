@@ -14,11 +14,11 @@ body {
 .search-container {
     display: flex;
     align-items: center;
-    flex: 1; /* Allow the container to grow and shrink */
+    /* flex: 1; Allow the container to grow and shrink */
 }
 
 .etalket-search {
-    flex: 1; /* Allow the input to grow and shrink within the container */
+    /* flex: 1; Allow the input to grow and shrink within the container */
     padding: 8px;
     border: 1px solid black;
     border-radius: 4px;
