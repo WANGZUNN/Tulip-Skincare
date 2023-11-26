@@ -12,7 +12,7 @@ export class ProductlistComponent {
   products = [
     {
       id: 1,
-      Name: "Winky Eye 1",
+      Name: "Winky Eye ",
       Price: 5,
       Color: "Pink",
       discount: 10,
@@ -30,11 +30,11 @@ export class ProductlistComponent {
     },
     {
       id: 3,
-      Name: "Make up Remover",
-      Price: 8, // Corrected to a number
-      Color: "Orange",
-      discount: 50,
-      instock: 7,
+      Name: "Two-way-powerder",
+      Price: 14, // Corrected to a number
+      Color: "Soft pink",
+      discount: 20,
+      instock: 13,
       Pimg: 'assets/skincare-product/3.jpg',
     }
   ];
