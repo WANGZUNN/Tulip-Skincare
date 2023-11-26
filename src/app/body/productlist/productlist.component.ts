@@ -12,7 +12,7 @@ export class ProductlistComponent {
   products = [
     {
       id: 1,
-      Name: "Winky Eye ",
+      Name: "Winky Eye",
       Price: 5,
       Color: "Pink",
       discount: 10,
@@ -22,7 +22,7 @@ export class ProductlistComponent {
     {
       id: 2,
       Name: "Make up Remover",
-      Price: 8, // Corrected to a number
+      Price: 8,
       Color: "Orange",
       discount: 50,
       instock: 7,
@@ -31,15 +31,15 @@ export class ProductlistComponent {
     {
       id: 3,
       Name: "Two-way-powerder",
-      Price: 14, // Corrected to a number
+      Price: 14,
       Color: "Soft pink",
       discount: 20,
-      instock: 13,
+      instock: 14,
       Pimg: 'assets/skincare-product/3.jpg',
     }
   ];
 
-  quantity: number[] = [0, 0]; // Initial quantity for each product
+  quantity: number[] = [0, 0, 0]; // Initial quantity for each product
 
   incrementQuantity(index: number) {
     if (this.quantity[index] < this.products[index].instock) {
@@ -53,19 +53,13 @@ export class ProductlistComponent {
     }
   }
 
-  discountprice(products: any, index: number) {
+  discountprice(product: any, index: number) {
     // Calculate and return the discounted price for each product
-    const discountedPrice = (products.Price * products.discount) / 100;
+    const discountedPrice = (product.Price * product.discount) / 100;
     return discountedPrice;
   }
 
-  stockcheck(products: any) {
-    return products.instock > 0 ? 'Only ' + products.instock + ' items left' : 'Not in Stock';
+  stockcheck(product: any) {
+    return product.instock > 0 ? 'Only ' + product.instock + ' items left' : 'Not in Stock';
   }
 }
-
-
-
-
-
-
