@@ -7,20 +7,18 @@ body {
 
 .etalket-header {
     display: flex;
-    background-color: #780606;
+    background-color: #F29298;
     color: white;
     padding: 10px;
     text-align: center;
 }
 .text{
     align-self: center;
-    font-family: 'YourFont', sans-serif; /* Replace 'YourFont' with the desired font name */
+    font-family: 'Shadows Into Light', cursive; /* Replace 'YourFont' with the desired font name */
     font-size: 30px; /* Adjust the font size as needed */
     font-weight: bold; /* Adjust font weight if needed */
     margin: 0px; /* Added margin to the right of the text */
 }
-
-
 
 .etalket-logo {
     width: 50px; /* Adjust the width as needed */
