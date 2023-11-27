@@ -120,7 +120,7 @@ export class ProductlistComponent {
     }
   ];
 
-  quantity: number[] = [0, 0, 0, 0, 0,0,0,0,0,0,0,0]; // Initial quantity for each product
+  quantity: number[] = Array(this.products.length).fill(0); // Initial quantity for each product
 
   incrementQuantity(index: number) {
     if (this.quantity[index] < this.products[index].instock) {
@@ -145,5 +145,8 @@ export class ProductlistComponent {
 
   stockcheck(product: any) {
     return product.instock > 0 ? 'Only ' + product.instock + ' items left' : 'Not in Stock';
+  }
+  get totalQuantity(): number {
+    return this.quantity.reduce((acc, curr) => acc + curr, 0);
   }
 }
