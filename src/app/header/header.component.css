@@ -5,10 +5,17 @@
     
     
 }
-.text  {
+.text-main  {
     align-self: center;
     font-family: cursive;
     color: white;
+    font-size: large;
+}
+.text-slogan  {
+    align-self: center;
+    font-family:serif;
+    font-size: small;
+    color: black;
 }
 
 
