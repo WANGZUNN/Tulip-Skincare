@@ -11,11 +11,6 @@ body {
     /* background-color: #f0f0f0; */
 }
 
-.search-container {
-    display: flex;
-    align-items: center;
-    /* flex: 1; Allow the container to grow and shrink */
-}
 
 .etalket-search {
     /* flex: 1; Allow the input to grow and shrink within the container */
@@ -45,10 +40,6 @@ body {
     outline: none;
 }
 
-.searchfor {
-    
-    margin-top: 0px; /* Add margin to separate the search text from the search bar */
-}
 
 .cart {
     font-size: 24px;
@@ -60,13 +51,3 @@ body {
     color: black;
 }
 
-.searchfor {
-    font-size: 15px;
-    opacity: 50%;
-} 
-
-.blur-text {
-    font-size: 14px; /* Adjust the size as needed */
-    color: #555; /* Adjust the color as needed */
-    opacity: 50%;
-}

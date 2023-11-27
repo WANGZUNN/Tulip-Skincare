@@ -12,11 +12,18 @@
   transform: scale(1.05);
 }
 
-.product-card .product-image {
-  max-width: 100%;
+.product-card {
+  max-width: 100%; /* If you want to enable max-width, uncomment this line */
   height: auto;
   object-fit: cover;
 }
+
+.product-image {
+  width: 100%; /* Set the width to 100% to make sure it takes the full width of its container */
+  height: 25vh; /* Set a fixed or percentage height for the product image */
+  object-fit: cover;
+}
+
 
 .product-card .card-content {
   padding: 0px;

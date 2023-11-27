@@ -1,19 +1,16 @@
 .etalket-bottom-bar{
     background-color: #fff;
-    padding: 7px;
 }
 
-.etalket-menu {
-    display: flex;
-    justify-content: left;
-}
+
 
 .etalket-menu a {
     color: #F29298;
     text-decoration: none;
-    margin: 0 20px;
+    margin-right: 3rem;
     font-weight: bold;
     font-size: 1.2rem;
+    align-self: center;
 }
 .etalket-menu a:hover {
     color: black;
