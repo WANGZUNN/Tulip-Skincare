@@ -1,51 +1,25 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
 
-.etalket-header {
-    display: flex;
-    background-color: #F29298;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    width: auto;
+.add {
+    display: flex !important;
+    width: 100%;
+    
+    
 }
-.text{
+.text  {
     align-self: center;
-    font-family: 'Shadows Into Light', cursive; /* Replace 'YourFont' with the desired font name */
-    font-size: 30px; /* Adjust the font size as needed */
-    font-weight: bold; /* Adjust font weight if needed */
-    margin: 0px; /* Added margin to the right of the text */
+    font-family: cursive;
+    color: white;
 }
 
-.etalket-logo {
-    width: 50px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
-    border-radius: 50%; /* Make it a circle */
-    overflow: hidden; /* Ensure the circular shape is maintained */
-    margin-right: 10px; /* Adjusted margin from 10px to 5px */
+
+.logo img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
 }
 
-.etalket-logo img {
-    width: 100%; /* Ensure the image fills the container */
-    height: 100%; /* Ensure the image fills the container */
-    object-fit: cover; /* Maintain aspect ratio */
-    
-}
 
-.etalket-header-nav{
-    align-items: right;
-    background-color: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    padding: 7px;
-    
-}
-
-.container-line2{ 
-    /* display: flex; */
-    margin-top: 5px;
-    justify-content: space-between;
+.header {
+    background-color: pink;
+  
 }

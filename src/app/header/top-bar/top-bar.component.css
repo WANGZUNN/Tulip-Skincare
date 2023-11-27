@@ -1,7 +1,5 @@
 .etalket-header-top-bar {
     display: flex;
-    
-  
 }
 
 .etalket-header-top-bar a {
@@ -12,5 +10,4 @@
 .etalket-header-top-bar a:hover{
     color: #F29298;
     text-decoration: none;
-    margin-right: 10px;
 }

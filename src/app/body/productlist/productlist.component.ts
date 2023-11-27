@@ -25,7 +25,7 @@ export class ProductlistComponent {
       Price: 8,
       Color: "Orange",
       discount: 50,
-      instock: 7,
+      instock: 8,
       Pimg: 'assets/skincare-product/2.jpg',
     },
     {
@@ -36,20 +36,32 @@ export class ProductlistComponent {
       discount: 20,
       instock: 14,
       Pimg: 'assets/skincare-product/3.jpg',
+    },
+    {
+      id: 3,
+      Name: "Two-way-powerder",
+      Price: 14,
+      Color: "Soft pink",
+      discount: 20,
+      instock: 14,
+      Pimg: 'assets/skincare-product/4.jpg',
     }
   ];
 
-  quantity: number[] = [0, 0, 0]; // Initial quantity for each product
+  quantity: number[] = [0, 0, 0, 0]; // Initial quantity for each product
 
   incrementQuantity(index: number) {
     if (this.quantity[index] < this.products[index].instock) {
       this.quantity[index]++;
+      this.products[index].instock--;
     }
   }
 
   decrementQuantity(index: number) {
     if (this.quantity[index] > 0) {
       this.quantity[index]--;
+      this.products[index].instock++;
+      
     }
   }
 
@@ -58,6 +70,7 @@ export class ProductlistComponent {
     const discountedPrice = (product.Price * product.discount) / 100;
     return discountedPrice;
   }
+
 
   stockcheck(product: any) {
     return product.instock > 0 ? 'Only ' + product.instock + ' items left' : 'Not in Stock';
