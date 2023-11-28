@@ -141,8 +141,11 @@ export class ProductlistComponent {
     const discountedPrice = (product.Price * product.discount) / 100;
     return discountedPrice;
   }
-
-
+  discountpercentage(product: any, index: number) {
+    // Calculate and return the discounted price for each product
+    return product.discount
+    
+  }
   stockcheck(product: any) {
     return product.instock > 0 ? 'Only ' + product.instock + ' items left' : 'Not in Stock';
   }

@@ -1,15 +1,20 @@
-<div class="product-card product-card-1 " *ngFor="let prod of products; let i = index">
-  <img class="product-image" [src]="prod.Pimg" alt="Product Image">
-  <div class="card-content">
-    <h2>{{ prod.Name }}</h2>
-    <p>{{ prod.Color }}</p>
-    <p class="price">${{ prod.Price }}</p>
-    <p class="discount">${{ discountprice(prod, i).toFixed() }}</p>
-    <p>Stock: {{ stockcheck(prod) }}</p>
-    <div class="quantity-controls">
-      <button (click)="incrementQuantity(i)">+</button>
-      <span>{{ quantity[i] }}</span>
-      <button (click)="decrementQuantity(i)">-</button>
+<div class="product-card product-card-1 relative" *ngFor="let prod of products; let i = index">
+  <div class="imgandtag">
+    <img class="product-image" [src]="prod.Pimg" alt="Product Image">
+    <p *ngIf="discountpercentage(prod, i) > 0" class="discount-tag absolute top-0 right-0 bg-red-500 text-white px-2 py-1 rounded">
+      {{ discountpercentage(prod, i).toFixed() }}% Off
+    </p>
+  </div>
+  <div class="card-content p-4">
+    <h2 class="text-lg font-semibold text-gray-800">{{ prod.Name }}</h2>
+    <p class="text-gray-600">{{ prod.Color }}</p>
+    <p class="text-lg font-bold text-pink-500">${{ prod.Price }}</p>
+    <p class="line-through">$ {{ discountprice( prod, i).toFixed() }} </p>
+    <p class="text-gray-800">Stock: {{ stockcheck(prod) }}</p>
+    <div class="quantity-controls flex items-center">
+      <button (click)="incrementQuantity(i)" class="bg-pink-500 text-white px-2 py-1 rounded">+</button>
+      <span class="font-bold">{{ quantity[i] }}</span>
+      <button (click)="decrementQuantity(i)" class="bg-pink-500 text-white px-2 py-1 rounded">-</button>
     </div>
   </div>
 </div>

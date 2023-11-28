@@ -5,61 +5,26 @@
   overflow: hidden;
   width: 100%;
   transition: transform 0.3s ease-in-out;
-  /* margin-right: 20px; Adjust margin as needed */
 }
 
 .product-card:hover {
   transform: scale(1.05);
 }
 
-.product-card {
-  max-width: 100%; /* If you want to enable max-width, uncomment this line */
-  height: auto;
-  object-fit: cover;
-}
-
 .product-image {
-  width: 100%; /* Set the width to 100% to make sure it takes the full width of its container */
-  height: 25vh; /* Set a fixed or percentage height for the product image */
   object-fit: cover;
-}
-
-
-.product-card .card-content {
-  padding: 0px;
-}
-
-.product-card h2,
-.product-card p {
-  margin: 0;
-}
-
-.product-card h2 {
-  font-size: 20px;
-  color: #333;
-}
-
-.product-card p {
-  font-size: 16px;
-  color: #666;
-}
-
-.product-card .price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #F29298;
-}
-
-.product-card .discount {
-  text-decoration: line-through;
-  color: #999;
-}
-
-.product-card .buy-now-button {
-  /* display: block; */
   width: 100%;
-  padding: 0px;
-  margin-top: 0px;
+  height: 35vh;
+}
+
+.card-content {
+  padding: 0;
+}
+
+.buy-now-button {
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
   background-color: #F29298;
   font-size: 16px;
   font-weight: bold;
@@ -69,9 +34,10 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.product-card .buy-now-button:hover {
-  background-color:  #F29298;
+.buy-now-button:hover {
+  background-color: #F29298;
 }
+
 .quantity-controls {
   display: flex;
   align-items: center;
@@ -81,7 +47,7 @@ button {
   padding: 5px 10px;
   margin: 0 5px;
   cursor: pointer;
-  background-color:  #F29298;
+  background-color: #F29298;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -97,9 +63,22 @@ button:hover {
   border-radius: 5px;
 }
 
-
 span {
   margin: 0 5px;
   font-weight: bold;
 }
 
+.imgandtag {
+  position: relative;
+}
+
+.discount-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
