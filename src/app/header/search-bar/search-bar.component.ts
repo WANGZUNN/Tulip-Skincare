@@ -11,16 +11,18 @@ export class SearchBarComponent {
   showMessage: boolean = false;
 
   toggle() {
-    if (this.searchingtext !== "") {
-      this.showMessage = !this.showMessage;
-    } else {
-      // Reset showMessage to false if no text is entered
-      this.showMessage = false;
-    }
+    // if (this.searchingtext !== "") {
+    //   this.showMessage = !this.showMessage;
+    // } else {
+    //   // Reset showMessage to false if no text is entered
+    //   this.showMessage = false;
+    // }
+    this.showMessage = this.searchingtext.length > 0;
   }
 
   onInputChange() {
     // Reset showMessage to false when the user starts typing a new text
+
     this.showMessage = false;
   }
 
