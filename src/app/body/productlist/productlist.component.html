@@ -5,16 +5,21 @@
       {{ discountpercentage(prod, i).toFixed() }}% Off
     </p>
   </div>
-  <div class="card-content p-4">
-    <h2 class="text-lg font-semibold text-gray-800">{{ prod.Name }}</h2>
+  <div class="card-content p-4 m-2">
+    <h2 class="text-lg font-semibold text-gray-800 text-pink">{{ prod.Name }}</h2>
     <p class="text-gray-600">{{ prod.Color }}</p>
     <p class="text-lg font-bold text-pink-500">${{ prod.Price }}</p>
-    <p class="line-through">$ {{ discountprice( prod, i).toFixed() }} </p>
-    <p class="text-gray-800">Stock: {{ stockcheck(prod) }}</p>
+    <p class="line-through text-discount">$ {{ discountprice( prod, i).toFixed() }} </p>
+    <p class="text-gray">Stock: {{ stockcheck(prod) }}</p>
     <div class="quantity-controls flex items-center">
-      <button (click)="incrementQuantity(i)" class="bg-pink-500 text-white px-2 py-1 rounded">+</button>
-      <span class="font-bold">{{ quantity[i] }}</span>
-      <button (click)="decrementQuantity(i)" class="bg-pink-500 text-white px-2 py-1 rounded">-</button>
+      <button (click)="incrementQuantity(i)" class="bg-pink-500 text-white px-3 py-1 focus:outline-none hover:bg-pink-600 rounded-lg">
+        +
+      </button>
+      <span class="font-bold mx-2">{{ quantity[i] }}</span>
+      <button (click)="decrementQuantity(i)" class="bg-pink-500 text-white px-3 py-1 focus:outline-none hover:bg-pink-600 rounded-lg">
+        -
+      </button>
+      
     </div>
   </div>
 </div>
