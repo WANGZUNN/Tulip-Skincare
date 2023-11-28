@@ -18,6 +18,7 @@ export class ProductlistComponent {
       discount: 10,
       instock: 14,
       Pimg: 'assets/skincare-product/1.jpg',
+      is_in_inventory: true,
     },
     {
       id: 2,
@@ -25,8 +26,9 @@ export class ProductlistComponent {
       Price: 8,
       Color: "Orange",
       discount: 50,
-      instock: 8,
+      instock: 0,
       Pimg: 'assets/skincare-product/2.jpg',
+      is_in_inventory: true,
     },
     {
       id: 3,
@@ -36,6 +38,7 @@ export class ProductlistComponent {
       discount: 20,
       instock: 9,
       Pimg: 'assets/skincare-product/3.jpg',
+      is_in_inventory: true,
     },
     {
       id: 4,
@@ -43,8 +46,9 @@ export class ProductlistComponent {
       Price: 5,
       Color: "pink",
       discount: 0,
-      instock: 20,
+      instock: 0,
       Pimg: 'assets/skincare-product/4.jpg',
+      is_in_inventory: true,
     },
     {
       id: 5,
@@ -54,6 +58,7 @@ export class ProductlistComponent {
       discount: 0,
       instock: 30,
       Pimg: 'assets/skincare-product/5.jpg',
+      is_in_inventory: true,
     },
     {
       id: 6,
@@ -63,6 +68,7 @@ export class ProductlistComponent {
       discount: 10,
       instock: 100,
       Pimg: 'assets/skincare-product/6.jpg',
+      is_in_inventory: true,
     },
     {
       id: 7,
@@ -72,6 +78,7 @@ export class ProductlistComponent {
       discount: 0,
       instock: 15,
       Pimg: 'assets/skincare-product/7.jpg',
+      is_in_inventory: true,
     },
     {
       id: 8,
@@ -81,6 +88,7 @@ export class ProductlistComponent {
       discount: 0,
       instock: 20,
       Pimg: 'assets/skincare-product/8.jpg',
+      is_in_inventory: true,
     },
     {
       id: 9,
@@ -90,6 +98,7 @@ export class ProductlistComponent {
       discount: 0,
       instock: 20,
       Pimg: 'assets/skincare-product/9.jpg',
+      is_in_inventory: true,
     },
     {
       id: 10,
@@ -99,6 +108,7 @@ export class ProductlistComponent {
       discount: 0,
       instock: 20,
       Pimg: 'assets/skincare-product/10.jpg',
+      is_in_inventory: true,
     },
     {
       id: 11,
@@ -106,8 +116,9 @@ export class ProductlistComponent {
       Price: 15,
       Color: "Brown",
       discount: 0,
-      instock: 25,
+      instock: 0,
       Pimg: 'assets/skincare-product/11.jpg',
+      is_in_inventory: true,
     },
     {
       id: 12,
@@ -117,6 +128,7 @@ export class ProductlistComponent {
       discount: 0,
       instock: 60,
       Pimg: 'assets/skincare-product/12.jpg',
+      is_in_inventory: true,
     }
   ];
 
@@ -149,7 +161,15 @@ export class ProductlistComponent {
   stockcheck(product: any) {
     return product.instock > 0 ? 'Only ' + product.instock + ' items left' : 'Not in Stock';
   }
-  get totalQuantity(): number {
-    return this.quantity.reduce((acc, curr) => acc + curr, 0);
+
+  is_in_available(product: any, index:number){
+      return product.instock > 0 ? 'Available' : 'Not Available' ;
   }
+
+  is_in_inventory(product: any, index: number): boolean {
+    return product.instock > 0;
+  }
+  
+  
+
 }

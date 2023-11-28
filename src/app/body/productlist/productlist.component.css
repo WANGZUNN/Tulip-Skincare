@@ -65,3 +65,13 @@ span {
   margin: 5px;
   border-radius: 5px;
 }
+
+.availability-tag {
+
+  
+  background-color: green;
+  color: white;
+  padding: 5px 25px;
+  margin: 5px;
+  border-radius: 5px;
+}

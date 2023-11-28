@@ -25,6 +25,7 @@ module.exports = {
         'pink': '#FEC0CA',
         'pink-500': '#FEC0CA',
         'pink-600': '#ff1ff1',
+    
       },
       spacing: {
         '8xl': '96rem',
