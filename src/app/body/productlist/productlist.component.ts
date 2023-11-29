@@ -125,8 +125,8 @@ export class ProductlistComponent {
       Name: "Lemon me",
       Price: 3,
       Color: "light-blue",
-      discount: 0,
-      instock: 0,
+      discount: 5,
+      instock: 10,
       Pimg: 'assets/skincare-product/12.jpg',
       is_in_inventory: true,
     }
