@@ -13,9 +13,9 @@
     <h2 class="text-lg font-semibold text-gray-800 text-pink">{{ prod.Name }}</h2>
     <p class="text-gray-600">{{ prod.Color }}</p>
     <p class="text-lg font-bold text-pink-500">${{ prod.Price }}</p>
-    <p class="line-through text-discount">$ {{ discountprice( prod, i).toFixed() }} </p>
+    <p class="line-through text-discount">$ {{ discountprice(prod, i) % 1 === 0 ? discountprice(prod, i) : discountprice(prod, i).toFixed(2) }}</p>
     <p [ngStyle]="{'color': is_in_inventory(prod, i) ? 'gray' : 'red'}">{{stockcheck(prod)}}</p>
-    <div class="quantity-controls flex items-center">
+    <div *ngIf="is_in_inventory(prod, i)" class="quantity-controls flex items-center">
       <button (click)="incrementQuantity(i)" class="bg-pink-500 text-white px-3 py-1 focus:outline-none hover:bg-pink-600 rounded-lg">
         +
       </button>
@@ -23,7 +23,7 @@
       <button (click)="decrementQuantity(i)" class="bg-pink-500 text-white px-3 py-1 focus:outline-none hover:bg-pink-600 rounded-lg">
         -
       </button>
-    
     </div>
+    
   </div>
 </div>
