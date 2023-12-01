@@ -46,7 +46,7 @@ export class ProductlistComponent {
       Price: 6,
       Color: "pink",
       discount: 20,
-      instock: 100,
+      instock: 0,
       Pimg: 'assets/skincare-product/4.jpg',
       is_in_inventory: true,
     },
