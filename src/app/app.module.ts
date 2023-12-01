@@ -8,7 +8,6 @@ import { SearchBarComponent } from './header/search-bar/search-bar.component';
 import { ProductlistComponent } from './body/productlist/productlist.component';
 import { FormsModule } from '@angular/forms';
 import { ContainerComponent } from './body/container/container.component';
-import { ProductComponent } from './body/productlist/product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +17,7 @@ import { ProductComponent } from './body/productlist/product/product.component';
     SearchBarComponent,
     ProductlistComponent,
     ContainerComponent,
-    ProductComponent
+
   ],
   imports: [
     BrowserModule,
