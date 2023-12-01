@@ -43,10 +43,10 @@ export class ProductlistComponent {
     {
       id: 4,
       Name: "Nee-care",
-      Price: 5,
+      Price: 6,
       Color: "pink",
-      discount: 0,
-      instock: 0,
+      discount: 20,
+      instock: 100,
       Pimg: 'assets/skincare-product/4.jpg',
       is_in_inventory: true,
     },
@@ -131,6 +131,7 @@ export class ProductlistComponent {
       is_in_inventory: true,
     }
   ];
+  minQuantity: number = 0;
 
   quantity: number[] = Array(this.products.length).fill(0); // Initial quantity for each product
 
@@ -169,7 +170,6 @@ export class ProductlistComponent {
   is_in_inventory(product: any, index: number): boolean {
     return product.instock > 0;
   }
-  
   
 
 }

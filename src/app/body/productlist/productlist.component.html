@@ -4,11 +4,11 @@
     <p *ngIf="discountpercentage(prod, i) > 0" class="discount-tag absolute top-0 right-0 bg-red-500 text-white px-2 py-1 rounded">
       {{ discountpercentage(prod, i).toFixed() }}% Off
     </p>
+    <!-- also can use ngClass -->
     <p [ngStyle]="{ 'color': is_in_inventory(prod, i) ? 'white' : 'white', 'background-color': is_in_inventory(prod, i) ? 'green' : 'red' }" class="availability-tag absolute bottom-0 right-0 text-white px-2 py-1 rounded">
       {{ is_in_available(prod, i) }}
     </p>
   </div>
-  
   <div class="card-content p-4 m-2">
     <h2 class="text-lg font-semibold text-gray-800 text-pink">{{ prod.Name }}</h2>
     <p class="text-gray-600">{{ prod.Color }}</p>
@@ -24,6 +24,5 @@
         -
       </button>
     </div>
-    
   </div>
 </div>
