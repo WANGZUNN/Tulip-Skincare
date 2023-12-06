@@ -171,7 +171,7 @@ export class ProductlistComponent {
     return product.instock > 0;
   }
   total = this.products.length;
-  instock =this.products.filter(p => p.is_in_inventory === true).length;
+  instock =this.products.filter(p => p.instock > 0).length;
   outofstock = this.products.filter( p => p.instock === 0).length;
 
 }
