@@ -1,4 +1,6 @@
+<app-filter [total]="total" [instock]="instock" [outofstock]="outofstock" class="absolute top-0 left-0 right-0"></app-filter>
 <div class="product-card product-card-1 relative" *ngFor="let prod of products; let i = index">
+<div >
   <div class="imgandtag relative">
     <img class="product-image" [src]="prod.Pimg" alt="Product Image">
     <p *ngIf="discountpercentage(prod, i) > 0" class="discount-tag absolute top-0 right-0 bg-red-500 text-white px-2 py-1 rounded">
@@ -25,4 +27,6 @@
       </button>
     </div>
   </div>
+</div>
+
 </div>

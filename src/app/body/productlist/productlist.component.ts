@@ -16,7 +16,7 @@ export class ProductlistComponent {
       Price: 5,
       Color: "Pink",
       discount: 10,
-      instock: 14,
+      instock: 0,
       Pimg: 'assets/skincare-product/1.jpg',
       is_in_inventory: true,
     },
@@ -170,6 +170,8 @@ export class ProductlistComponent {
   is_in_inventory(product: any, index: number): boolean {
     return product.instock > 0;
   }
-  
+  total = this.products.length;
+  instock =this.products.filter(p => p.is_in_inventory === true).length;
+  outofstock = this.products.filter( p => p.instock === 0).length;
 
 }
