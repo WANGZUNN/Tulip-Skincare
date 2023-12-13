@@ -11,4 +11,9 @@ export class ContainerComponent {
   @Input() instock: number =0;
 
   @Input() outofstock: number=0;
+
+  selectedFilterRadioButton: string = 'all';
+
+ 
+
 }

@@ -23,8 +23,8 @@ export class ProductlistComponent {
       Name: "Make up Remover",
       Price: 8,
       Color: "Orange",
-      discount: 50,
-      instock: 0,
+      discount: 40,
+      instock: 5,
       Pimg: 'assets/skincare-product/2.jpg',
       is_in_inventory: true,
     },
@@ -171,5 +171,14 @@ export class ProductlistComponent {
   total = this.products.length;
   instock =this.products.filter(p => p.instock > 0).length;
   outofstock = this.products.filter( p => p.instock === 0).length;
+
+  selectedFilterRadioButton: string = 'all';
+
+  onFilterChanged(value:string){
+    
+    this.selectedFilterRadioButton = value;
+
+
+}
 
 }

@@ -1,20 +1,20 @@
 <div class="flex items-center space-x-4 ml-8">
   <div class="options-selector">
-    <input type="radio" id="all" name="stockFilter" value="all" checked>
+    <input type="radio" id="all" name="stockFilter" value="all" [(ngModel)]="selectedFilterRadioButton" (change)="onselectedFilterRadioButtonChanged()">
     <label for="all" class="cursor-pointer bg-gray-200 hover:bg-gray-300 rounded-md px-4 py-2 transition duration-300 font-bold">
       <span>({{total}})</span> All
     </label>
   </div>
   
   <div class="options-selector">
-    <input type="radio" id="inStock" name="stockFilter" value="inStock">
+    <input type="radio" id="inStock" name="stockFilter" value="instock" [(ngModel)]="selectedFilterRadioButton" (change)="onselectedFilterRadioButtonChanged()">
     <label for="inStock" class="cursor-pointer bg-gray-200 hover:bg-gray-300 rounded-md px-4 py-2 transition duration-300 font-bold">
       <span>({{instock}})</span> In Stock
     </label>
   </div>
 
   <div class="options-selector">
-    <input type="radio" id="outOfStock" name="stockFilter" value="outOfStock">
+    <input type="radio" id="outOfStock" name="stockFilter" value="outofstock" [(ngModel)]="selectedFilterRadioButton" (change)="onselectedFilterRadioButtonChanged()">
     <label for="outOfStock" class="cursor-pointer bg-gray-200 hover:bg-gray-300 rounded-md px-4 py-2 transition duration-300 font-bold">
       <span>({{outofstock}})</span> Out-of-Stock
     </label>
