@@ -1,4 +1,4 @@
-<app-filter [total]="total" [instock]="instock" [outofstock]="outofstock" (selectedFilterRadioButtonChanged)="onFilterChanged($event)" class="absolute top-0 left-0 right-0"></app-filter>
+<app-filter [total]="total" [instock]="instock" [outofstock]="outofstock" (selectedFilterRadioButtonChanged)="onFilterChanged($event)" class="absolute top-0 left-0 right-0 "></app-filter>
 
 <ng-container *ngFor="let prod of products; let i = index">
   <div class="product-card product-card-1 relative" *ngIf="(selectedFilterRadioButton === 'all') ||
