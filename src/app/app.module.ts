@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TopBarComponent } from './header/top-bar/top-bar.component';
 import { BottomBarComponent } from './header/bottom-bar/bottom-bar.component';
-import { SearchBarComponent } from './header/search-bar/search-bar.component';
+import { SearchBarComponent } from './body/container/search-bar/search-bar.component';
 import { ProductlistComponent } from './body/productlist/productlist.component';
 import { FormsModule } from '@angular/forms';
 import { ContainerComponent } from './body/container/container.component';

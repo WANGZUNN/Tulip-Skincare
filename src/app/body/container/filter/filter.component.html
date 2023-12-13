@@ -1,25 +1,31 @@
-<div class="flex flex-row items-center">
-  <p class=" ml-8">Filter:</p> 
-  <div class="flex items-center space-x-2 lg:space-x-4 ml-4 lg:ml-8">
-    <div class="options-selector flex items-center">
-      <input type="radio" id="all" name="stockFilter" value="all" [(ngModel)]="selectedFilterRadioButton" (change)="onselectedFilterRadioButtonChanged()">
-      <label for="all" class="cursor-pointer bg-gray-200 hover:bg-gray-300 rounded-md px-2 lg:px-4 py-1 lg:py-2 transition duration-300 font-bold text-sm lg:text-base">
-        <span style="white-space: nowrap;">({{total}}) All</span> 
-      </label>
-    </div>
-    
-    <div class="options-selector flex items-center">
-      <input type="radio" id="inStock" name="stockFilter" value="instock" [(ngModel)]="selectedFilterRadioButton" (change)="onselectedFilterRadioButtonChanged()">
-      <label for="inStock" class="cursor-pointer bg-gray-200 hover:bg-gray-300 rounded-md px-2 lg:px-4 py-1 lg:py-2 transition duration-300 font-bold text-sm lg:text-base">
-        <span style="white-space: nowrap;">({{instock}}) In Stock</span>
-      </label>
-    </div>
 
-    <div class="options-selector flex items-center">
-      <input type="radio" id="outOfStock" name="stockFilter" value="outofstock" [(ngModel)]="selectedFilterRadioButton" (change)="onselectedFilterRadioButtonChanged()">
-      <label for="outOfStock" class="cursor-pointer bg-gray-200 hover:bg-gray-300 rounded-md px-2 lg:px-4 py-1 lg:py-2 transition duration-300 font-bold text-sm lg:text-base">
-        <span style="white-space: nowrap;">({{outofstock}}) Out-of-Stock</span> 
-      </label>
+<div class="flex flex-row items-center justify-center md:justify-center lg:justify-start lg:ml-8 md:ml-8">
+    <p class="">Filter:</p> 
+    <div class="flex items-center space-x-2 lg:space-x-4 ml-4 lg:ml-8">
+      
+      <!-- All -->
+      <div class="options-selector flex items-center">
+        <input type="radio" id="all" name="stockFilter" value="all" [(ngModel)]="selectedFilterRadioButton" (change)="onselectedFilterRadioButtonChanged()">
+        <label for="all" class="cursor-pointer bg-gray-200 hover:bg-gray-300 rounded-md px-2 lg:px-4 py-1 lg:py-2 transition duration-300 font-bold text-sm lg:text-base md:text-base">
+          <span style="white-space: nowrap;">({{total}}) All</span> 
+        </label>
+      </div>
+      
+      <!-- In Stock -->
+      <div class="options-selector flex items-center">
+        <input type="radio" id="inStock" name="stockFilter" value="instock" [(ngModel)]="selectedFilterRadioButton" (change)="onselectedFilterRadioButtonChanged()">
+        <label for="inStock" class="cursor-pointer bg-gray-200 hover:bg-gray-300 rounded-md px-2 lg:px-4 py-1 lg:py-2 transition duration-300 font-bold text-sm lg:text-base md:text-base">
+          <span style="white-space: nowrap;">({{instock}}) In Stock</span>
+        </label>
+      </div>
+
+      <!-- Out of Stock -->
+      <div class="options-selector flex items-center">
+        <input type="radio" id="outOfStock" name="stockFilter" value="outofstock" [(ngModel)]="selectedFilterRadioButton" (change)="onselectedFilterRadioButtonChanged()">
+        <label for="outOfStock" class="cursor-pointer bg-gray-200 hover:bg-gray-300 rounded-md px-2 lg:px-4 py-1 lg:py-2 transition duration-300 font-bold text-sm lg:text-base md:text-base">
+          <span style="white-space: nowrap;">({{outofstock}}) Out-of-Stock</span> 
+        </label>
+      </div>
     </div>
   </div>
-</div>
+

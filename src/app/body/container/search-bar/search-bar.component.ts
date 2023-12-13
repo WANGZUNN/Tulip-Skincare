@@ -1,5 +1,5 @@
 // search-bar.component.ts
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-search-bar',
@@ -29,4 +29,21 @@ export class SearchBarComponent {
   getResultMessage() {
     return this.showMessage ? `Search result for: ${this.searchingtext}` : `Searching for: ${this.searchingtext}`;
   }
+  
+
+  searchText: string = '';
+
+  @Output()
+    searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
+
+    onSearchTextChanged(){
+      this.searchTextChanged.emit(this.searchText)
+
+    }
+
+    updateSearchText(event: any){
+      this.searchText = event.target.value;
+    }
+
+
 }
