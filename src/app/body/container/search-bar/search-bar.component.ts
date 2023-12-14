@@ -14,18 +14,21 @@ export class SearchBarComponent {
     this.showMessage = this.searchingtext.length > 0;
   }
 
-  onInputChange() {
-    this.showMessage = false;
-  }
 
   getResultMessage() {
     return this.showMessage ? `Search result for: ${this.searchingtext}` : `Searching for: ${this.searchingtext}`;
   }
-
+  searchText: string = "";
   @Output()
   searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
 
   onSearchTextChanged() {
+    this.showMessage = false;
     this.searchTextChanged.emit(this.searchingtext);
   }
+
+    updateSearchText(event:any){
+      this.searchText = event.target.value;
+    }
+
 }

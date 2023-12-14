@@ -1,9 +1,17 @@
 <app-filter [total]="total" [instock]="instock" [outofstock]="outofstock" (selectedFilterRadioButtonChanged)="onFilterChanged($event)" class="absolute top-0 left-0 right-0"></app-filter>
 
 <ng-container *ngFor="let prod of products; let i = index">
-  <div class="product-card product-card-1 relative" *ngIf="(selectedFilterRadioButton === 'all') ||
+  <!-- *ngIf="(selectedFilterRadioButton === 'all') ||
     (selectedFilterRadioButton === 'instock' && prod.instock > 0) ||
-    (selectedFilterRadioButton === 'outofstock' && prod.instock === 0)">
+    (selectedFilterRadioButton === 'outofstock' && prod.instock === 0) -->
+  <div class="product-card product-card-1 relative" *ngIf="
+  prod.Name.toLowerCase().includes(searchText) &&
+  (
+    selectedFilterRadioButton === 'all' ||
+    (selectedFilterRadioButton === 'instock' && prod.instock > 0) ||
+    (selectedFilterRadioButton === 'outofstock' && prod.instock === 0)
+  )
+">
     <!-- Your product card content here -->
     <div class="imgandtag relative">
       <img class="product-image" [src]="prod.Pimg" alt="Product Image">
@@ -14,7 +22,7 @@
         {{ is_in_available(prod, i) }}
       </p>
     </div>
-    
+
     <div class="card-content p-4 m-2">
       <h2 class="text-lg font-semibold text-gray-800 text-pink">{{ prod.Name }}</h2>
       <p class="text-gray-600">{{ prod.Color }}</p>
