@@ -5,13 +5,14 @@
     (selectedFilterRadioButton === 'instock' && prod.instock > 0) ||
     (selectedFilterRadioButton === 'outofstock' && prod.instock === 0) -->
   <div class="product-card product-card-1 relative" *ngIf="
-  prod.Name.toLowerCase().includes(searchText) &&
+  prod.Name.toLowerCase().includes(searchText.toLowerCase()) &&
   (
     selectedFilterRadioButton === 'all' ||
     (selectedFilterRadioButton === 'instock' && prod.instock > 0) ||
     (selectedFilterRadioButton === 'outofstock' && prod.instock === 0)
   )
-">
+"
+>
     <!-- Your product card content here -->
     <div class="imgandtag relative">
       <img class="product-image" [src]="prod.Pimg" alt="Product Image">
