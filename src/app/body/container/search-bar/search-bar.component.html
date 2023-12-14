@@ -10,5 +10,10 @@
       <i class="fa fa-shopping-cart"></i>
     </div>
   </div>
-  <p *ngIf="searchingtext !== '' " class="search-message ">{{ getResultMessage() | slice:0:25 }}{{ searchingtext.length > 25 ? '...' : '' }}</p>
+  <p *ngIf="searchingtext !== undefined && searchingtext !== null" class="search-message" [class.hide]="searchingtext.trim() === ''">
+    {{ getResultMessage() | slice: 0:25 }}{{ searchingtext.length > 25 ? '...' : '' }}
+</p>
+
+
+
 </div>

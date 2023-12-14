@@ -59,4 +59,9 @@ body {
     align-items: start;
     margin-right: 6rem;
  }
+
+ .hide {
+    visibility: hidden;
+}
+
  
