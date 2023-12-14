@@ -18,7 +18,7 @@ export class SearchBarComponent {
   getResultMessage() {
     return this.showMessage ? `Search result for: ${this.searchingtext}` : `Searching for: ${this.searchingtext}`;
   }
-  searchText: string = "";
+  searchText:string = "";
   @Output()
   searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
 
