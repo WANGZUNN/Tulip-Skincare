@@ -1,4 +1,5 @@
-import { Component,Input } from '@angular/core';
+// container.component.ts
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-container',
@@ -6,14 +7,14 @@ import { Component,Input } from '@angular/core';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent {
-  @Input() total: number= 0;
-
-  @Input() instock: number =0;
-
-  @Input() outofstock: number=0;
+  @Input() total: number = 0;
+  @Input() instock: number = 0;
+  @Input() outofstock: number = 0;
 
   selectedFilterRadioButton: string = 'all';
+  searchText: string = "";
 
- 
-
+  setsearchtext(value: string) {
+    this.searchText = value;
+  }
 }

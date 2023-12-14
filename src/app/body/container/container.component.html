@@ -1,8 +1,7 @@
 <div class="product-container relative p-4">
     <div class="flex flex-row justify-center items-center lg:justify-end md:justify-end mt-4">
-        <app-search-bar></app-search-bar>
+        <app-search-bar (searchTextChanged)="setsearchtext($event)"></app-search-bar>
       </div>
-      
     <productlist class=" grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 justify-items-center m-4">   
     </productlist>
 </div>
